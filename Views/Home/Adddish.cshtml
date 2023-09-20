@@ -1,0 +1,41 @@
+@model Dish
+<div class="text-center">
+    <h1 class="display-4">Add a new Dish !</h1>
+    <span><a href="/">Home</a> | <a href="/adddish"></a></span>
+
+            <form action="/dish/add" method="post">
+    <div class="container d-flex justify-content-evenly mt-5 ">
+        
+        <div class="left">
+            <label class="form-label">Chef Name :</label>
+            <input type="text" asp-for="Chef" class="form-control">
+
+            <label class="form-label">Name of Dish</label>
+            <input type="text" asp-for="Name" class="form-control">
+
+            <label class="form-label"># Calories</label>
+            <input type="number" asp-for="Calories" class="form-control">
+        </div>
+
+
+        <div class="middle">
+            <label class="form-label">Tastiness</label>
+            <select class="form-select" asp-for="Tastiness">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+            </select>    
+        </div>
+        <div class="right">
+                
+                <label class="form-label">Desccription</label>
+                <textarea class="form-control" asp-for="Description" rows="3"></textarea>
+                <input type="submit" class="form-control btn-success mt-5">
+
+        </div>
+    </div>
+    </form>
+</div>
